@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "Georgia-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.animaapp.com/Georgia-Regular") format("truetype");
+}
+@font-face {
+  font-family: "Arial-Italic";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://fonts.animaapp.com/Arial-Italic") format("truetype");
+}
+@font-face {
+  font-family: "Arial-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.animaapp.com/Arial-Regular") format("truetype");
+}
+.header > .wrapper {
+  background: url("./assets/img/noise_transparent@2x.png"), #513D2F;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header > .wrapper {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px;
+}
+
+.welcome > .wrapper {
+  height: 788px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("./assets/img/start-screen-puppy.png") no-repeat right bottom, url("./assets/img/noise_transparent@2x.png"), #513D2F;
+}
+.welcome > .wrapper p {
+  color: rgb(205, 205, 205);
+  width: 460px;
+}
+.welcome > .wrapper .welcome-pic {
+  display: none;
+}
+
+.about > .wrapper {
+  height: 588px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-flow: column wrap;
+  -moz-column-gap: 120px;
+       column-gap: 120px;
+  flex-grow: 0;
+  padding: 60px 215px;
+}
+.about > .wrapper h2 {
+  width: 360px;
+}
+.about > .wrapper p {
+  color: rgb(76, 76, 76);
+  width: 430px;
+}
+
+.pets > .wrapper {
+  height: 877px;
+  background-color: rgb(246, 246, 246);
+}
+
+.help > .wrapper {
+  height: 611px;
+  background-color: rgb(255, 255, 255);
+}
+
+.donation > .wrapper {
+  height: 462px;
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  flex-flow: column wrap;
+  padding: 90px 180px;
+  flex-grow: 0;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  column-gap-width: 370px;
+}
+.donation > .wrapper p {
+  color: rgb(76, 76, 76);
+  width: 430px;
+}
+.donation > .wrapper div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #F1CDB3;
+  border-radius: 9px;
+}
+.donation > .wrapper .donation-description {
+  color: rgb(178, 178, 178);
+}
+
+.footer > .wrapper {
+  height: 350px;
+  color: rgb(241, 205, 179);
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  -moz-column-gap: 130px;
+       column-gap: 130px;
+  background: url("./assets/img/footer-puppy.png") no-repeat 95% bottom, url("./assets/img/noise_transparent@2x.png"), #513D2F;
+}
+.footer > .wrapper h3 {
+  width: 280px;
+}
+.footer > .wrapper .contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 310px;
+}
+.footer > .wrapper img {
+  width: 40px;
+  height: 32px;
+}
+.footer > .wrapper h4 {
+  margin-left: 10px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 44px;
+  width: 310px;
+  line-height: 130%;
+}
+
+h2 {
+  color: rgb(84, 84, 84);
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+h5 {
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+p {
+  margin: 0 0 25px 0;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-left: 35px;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 0 10px;
+  color: rgb(205, 205, 205);
+}
+
+.nav-item, p {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 160%;
+}
+
+.donation-description {
+  font-family: Arial;
+  font-size: 12px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.donation-description {
+  line-height: 18px;
+}
+
+.button {
+  width: 100px;
+}
