@@ -42,31 +42,29 @@ $font-size-xxxl: 44px
 
 $noise: url("./assets/img/noise_transparent@2x.png")
 
-%texture
-    background: url("./assets/img/noise_transparent@2x.png"), #513D2F
-    //, 
-    //radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
-
-// $font-stack: Helvetica, sans-serif
-// $primary-color: #333
-// body
-//     font: 100% $font-stack
-//     color: $primary-color
-
-
-body
+%start-screen-gradient-background
+    background: $noise, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20
+%footer-gradient-background
+    background: $noise, radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
+%center
+    margin: 0 auto
+/* body
   display: flex
   flex-direction: column
   margin: 0
-  padding: 0
-
-html
-  box-sizing: border-box
+  padding: 0 */
 
 *
-  box-sizing: inherit
-  &::before, &::after
+    padding: 0px
+    margin: 0px
+
+html
+    box-sizing: border-box
+
+*
     box-sizing: inherit
+    &::before, &::after
+        box-sizing: inherit
 
 html, body
   scroll-behavior: smooth
@@ -81,18 +79,17 @@ html, body
 
 .header > .wrapper
     height:120px
-    @extend %texture
+    background: $noise, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20
     display: flex
     justify-content: space-between
     align-items: center
     border-bottom: solid 1px
 .welcome > .wrapper
     height: 908px - 120px
+    background: url("./assets/img/start-screen-puppy.png") no-repeat right bottom, $noise, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20
     display: flex
     flex-direction: column
     justify-content: center
-    background: url("./assets/img/start-screen-puppy.png") no-repeat right bottom, 
-    url("./assets/img/noise_transparent@2x.png"), #513D2F
     p
         color: $color-dark-s
         width: 460px
@@ -107,65 +104,132 @@ html, body
     flex-grow: 0
     padding: 60px 215px
 
-    h2
+    h3
         width: 360px
+        margin-bottom: 25px
+        color: $color-dark-l
+
     p
         color: $color-dark-xl
         width: 430px
 .pets > .wrapper
-    height:877px
+    height: 877px
     background-color: $color-light-l
+    display: flex
+    flex-direction: column
+    h3
+        width: 400px
+        text-align: center
+        margin: 80px auto 60px auto
+    .pets-carousel
+        margin: 0 auto 0 auto
+        display: flex
+        flex-direction: row
+        justify-content: center
+        gap: 90px
+        .pets-card
+            width: 270px
+            height: 435px
+            background-color: $color-light-s
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 30px
+            .pets-card-pic
+                
+            .pets-card-title
+                
+            .pets-card-button
+                
 
+
+    .our-pets-button
+        margin: 0 auto
+                
 .help > .wrapper
     height:611px
     background-color: $color-light-xl
+    h3
+        width: 310px
+        text-align: center
+        margin: 80px auto 60px auto
+    .help-box
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        gap: 55px 120px
+
+        .help-heading
+            @extend h4
+            text-align: center
+        img
+            display: block
+            margin: 0 auto 30px auto
 
 .donation > .wrapper
     height:462px
     background-color: $color-light-l
     display: flex
     flex-flow: column wrap
-    padding: 90px 180px
-
     flex-grow: 0
     column-gap: 30px
-        width: 370px
-    p
-        color: $color-dark-xl
-        width: 430px
 
-    div
+    padding: 80px 180px
+    h3
+        width: 300px
+    h3, h4, h5
+        color: $color-dark-l
+    h3, h5, div
+        margin: 0 0 20px 0
+
+    .credit-card
         display: flex
         flex-direction: row
-        justify-content: space-between
+        // justify-content: space-between
         background: #F1CDB3
+        align-items: center
+        padding: 10px 15px
+        gap: 10px
+        width: 349px
+        height: 43px
+        background: $color-primary
         border-radius: 9px
+
+        img
+            width: 30px
+            height: 23px
+            color: $color-dark-3xl
 
     .donation-description
         color: $color-dark-m
+        width: 380px
+        margin: 0 0 0 0
 
 .footer > .wrapper
     height:350px
-    // @extend %texture
+    @extend %footer-gradient-background
     color: $color-primary
     display: flex
     flex-flow: column wrap
     // justify-content: flex-start
     align-content: flex-start
     column-gap: 130px
+    row-gap: 40px
+    padding-top:56px
     h3
         width: 280px
+        color: $color-light-xl
     .contact
         display: flex
         flex-direction: row
         justify-content: flex-start
         align-items: center
-        width: 310px
-    background: url("./assets/img/footer-puppy.png") no-repeat 95% bottom, 
-    url("./assets/img/noise_transparent@2x.png"), #513D2F
+        width: 320px
+    background: url("./assets/img/footer-puppy.png") no-repeat 95% bottom, url("./assets/img/noise_transparent@2x.png"), #513D2F
     img
         width: 40px
         height: 32px
+        flex: 0 0 auto
     h4
         margin-left: 10px
 
@@ -179,13 +243,10 @@ h1
     font-size: $font-size-xxxl
     width: 310px
     line-height: 130%
-h2
-    color: $color-dark-l
-    font-size: $font-size-xxl
-    line-height: 130%
-    letter-spacing: 0.06em
+    margin-bottom: 42px
+
 h3
-    color: $color-light-xl
+    color: $color-dark-l
     font-size: $font-size-xxl
     line-height: 130%
     letter-spacing: 0.06em
@@ -214,7 +275,7 @@ p
 
 .nav-link
   text-decoration: none
-  padding: 0 10px
+  padding: 0
   color: $color-dark-s
 
 .nav-item, p
@@ -241,3 +302,13 @@ p
 
 .button
     width: 100px
+
+.pets-card-title
+    font: $font-main
+    font-size: 20px
+    line-height: 23px
+    display: flex
+    align-items: center
+    text-align: center
+    letter-spacing: 0.06em
+    color: $color-dark-l

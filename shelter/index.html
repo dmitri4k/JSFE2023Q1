@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shelter</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
-  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
 
 </head>
 <body>
@@ -22,13 +22,13 @@
             <a href="#about" class="nav-link">About the shelter</a>
           </li>
           <li class="nav-item">
-            <a href="#pets" class="nav-link">Our pets</a>
+            <a href="./pets.html" class="nav-link">Our pets</a>
           </li>
           <li class="nav-item">
             <a href="#help" class="nav-link">Help the shelter</a>
           </li>
           <li class="nav-item">
-            <a href="#contacts" class="nav-link">Contacts</a>
+            <a href="#footer" class="nav-link">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -43,7 +43,7 @@
       <p>
         We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!
       </p>
-      <button class="button-welcome button">Make a friend</button>
+      <button class="button-welcome button" onClick="location.href='./pets.html'">Make a friend</button>
       <!-- <img src="./assets/img/start-screen-puppy.png" class="pic welcome-pic" alt="start-screen-puppy"> -->
     </div>
   </section>
@@ -52,7 +52,7 @@
   <section class="about" id="about">
     <div class="wrapper">
       <img src="./assets/img/about-pets.png" class="pic about-pic" alt="about-pets">
-      <h2>About the shelter “Cozy House”</h2>
+      <h3>About the shelter “Cozy House”</h3>
       <p>
         Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.
       </p>
@@ -61,10 +61,30 @@
   </section>
 
   <!-- Section 3 start -->
-  <section class="friends" id="friends">
+  <section class="pets" id="pets">
     <div class="wrapper">
-      <h2>Our friends who are looking for a house</h2>
+      <h3>Our friends who are looking for a house</h3>
+<div class="pets-carousel">
+  <img src="./assets/svg/button-arrow-l.svg" alt="button-arrow" class="button-arrow">
+  <div class="pets-card">
+    <img src="./assets/img/pets/katrine.png" alt="katrine">
+    <div class="pets-card-title">Katrine</div>
+    <button class="pets-card-button">Learn more</button>
+  </div>
+  <div class="pets-card">
+    <img src="./assets/img/pets/jennifer.png" alt="jennifer">
+    <div class="pets-card-title">Jennifer</div>
+    <button class="pets-card-button">Learn more</button>
+  </div>
+  <div class="pets-card">
+    <img src="./assets/img/pets/woody.png" alt="woody">
+    <div class="pets-card-title">Woody</div>
+    <button class="pets-card-button">Learn more</button>
+  </div>
+  <img src="./assets/svg/button-arrow-r.svg" alt="button-arrow" class="button-arrow">
+</div>
 
+<button class="our-pets-button">Get to know the rest</button>
     </div>
   </section>
 
@@ -72,9 +92,47 @@
   <section class="help" id="help">
     <div class="wrapper">
         <h3>How you can help our shelter</h3>
-        <div class="help-box"></div>
+
+        <div class="help-box">
+<div class="help-item">
+  <img src="./assets/svg/icon-pet-food.svg" alt="icon-pet-food" class="help-icon">
+  <div class="help-heading">Pet food</div>
+</div>
+<div class="help-item">
+  <img src="./assets/svg/icon-transportation.svg" alt="icon-transportation" class="help-icon">
+  <div class="help-heading">Transportation</div>
+</div>
+<div class="help-item">
+  <img src="./assets/svg/icon-toys.svg" alt="icon-toys" class="help-icon">
+  <div class="help-heading">Toys</div>
+</div>
+<div class="help-item">
+  <img src="./assets/svg/icon-bowls-and-cups.svg" alt="icon-bowls-and-cups" class="help-icon">
+  <div class="help-heading">Bowls and cups</div>
+</div>
+<div class="help-item">
+  <img src="./assets/svg/icon-shampoos.svg" alt="icon-shampoos" class="help-icon">
+  <div class="help-heading">Shampoos</div>
+</div>
+<div class="help-item">
+  <img src="./assets/svg/icon-vitamins.svg" alt="icon-vitamins" class="help-icon">
+  <div class="help-heading">Vitamins</div>
+</div>
+<div class="help-item">
+  <img src="./assets/svg/icon-medicines.svg" alt="icon-medicines" class="help-icon">
+  <div class="help-heading">Medicines</div>
+</div>
+<div class="help-item">
+  <img src="./assets/svg/icon-collars-leashes.svg" alt="icon-collars-leashes" class="help-icon">
+  <div class="help-heading">Collars / Leashes</div>
+</div>
+<div class="help-item">
+  <img src="./assets/svg/icon-sleeping-area.svg" alt="icon-sleeping-area" class="help-icon">
+  <div class="help-heading">Sleeping area</div>
+</div>
+        </div>
       </div>
-    </div>
+
   </section>
 
   </section>
@@ -94,24 +152,24 @@
   </div>
   </section>
 </main>
-<footer class="footer">
+<footer class="footer" id="footer">
   <div class="wrapper">
     <h3>For questions and suggestions</h3>
     <div class="contact">
-      <img src="./assets/svg/icon-mail.svg" alt="icon-mail">
+      <img src="./assets/svg/icon-mail.svg" alt="icon">
       <h4>email@shelter.com<h4>
     </div>
     <div class="contact">
-      <img src="./assets/svg/icon-phone.svg" alt="icon-mail">
+      <img src="./assets/svg/icon-phone.svg" alt="icon">
       <h4>+13 674 567 75 54<h4>
     </div>
     <h3>We are waiting for your visit</h3>
     <div class="contact">
-      <img src="./assets/svg/icon-marker.svg" alt="icon-mail">
+      <img src="./assets/svg/icon-marker.svg" alt="icon">
       <h4>1 Central Street, Boston (entrance from the store)<h4>
     </div>
     <div class="contact">
-      <img src="./assets/svg/icon-marker.svg" alt="icon-mail">
+      <img src="./assets/svg/icon-marker.svg" alt="icon">
       <h4>18 South Park, London <h4>
     </div>
     <!-- <img src="./assets/img/footer-puppy.png" class="pic footer-pic" alt="footer-puppy"> -->
