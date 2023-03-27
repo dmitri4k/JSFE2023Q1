@@ -40,199 +40,6 @@ $font-size-xl: 20px
 $font-size-xxl: 35px
 $font-size-xxxl: 44px
 
-$noise: url("./assets/img/noise_transparent@2x.png")
-
-%start-screen-gradient-background
-    background: $noise, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20
-%footer-gradient-background
-    background: $noise, radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
-%center
-    margin: 0 auto
-/* body
-  display: flex
-  flex-direction: column
-  margin: 0
-  padding: 0 */
-
-*
-    padding: 0px
-    margin: 0px
-
-html
-    box-sizing: border-box
-
-*
-    box-sizing: inherit
-    &::before, &::after
-        box-sizing: inherit
-
-html, body
-  scroll-behavior: smooth
-
-.wrapper
-  max-width: 1280px
-  margin: 0 auto
-  padding: 0 40px
-
-.pic
-    // width:200px
-
-.header > .wrapper
-    height:120px
-    background: $noise, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20
-    display: flex
-    justify-content: space-between
-    align-items: center
-    border-bottom: solid 1px
-.welcome > .wrapper
-    height: 908px - 120px
-    background: url("./assets/img/start-screen-puppy.png") no-repeat right bottom, $noise, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20
-    display: flex
-    flex-direction: column
-    justify-content: center
-    p
-        color: $color-dark-s
-        width: 460px
-    .welcome-pic
-        display: none
-.about > .wrapper
-    height:588px
-    background-color: $color-light-xl
-    display: flex
-    flex-flow: column wrap
-    column-gap: 120px
-    flex-grow: 0
-    padding: 60px 215px
-
-    h3
-        width: 360px
-        margin-bottom: 25px
-        color: $color-dark-l
-
-    p
-        color: $color-dark-xl
-        width: 430px
-.pets > .wrapper
-    height: 877px
-    background-color: $color-light-l
-    display: flex
-    flex-direction: column
-    h3
-        width: 400px
-        text-align: center
-        margin: 80px auto 60px auto
-    .pets-carousel
-        margin: 0 auto 0 auto
-        display: flex
-        flex-direction: row
-        justify-content: center
-        gap: 90px
-        .pets-card
-            width: 270px
-            height: 435px
-            background-color: $color-light-s
-            display: flex
-            flex-direction: column
-            align-items: center
-            gap: 30px
-            .pets-card-pic
-                
-            .pets-card-title
-                
-            .pets-card-button
-                
-
-
-    .our-pets-button
-        margin: 0 auto
-                
-.help > .wrapper
-    height:611px
-    background-color: $color-light-xl
-    h3
-        width: 310px
-        text-align: center
-        margin: 80px auto 60px auto
-    .help-box
-        display: flex
-        flex-flow: row wrap
-        justify-content: center
-        gap: 55px 120px
-
-        .help-heading
-            @extend h4
-            text-align: center
-        img
-            display: block
-            margin: 0 auto 30px auto
-
-.donation > .wrapper
-    height:462px
-    background-color: $color-light-l
-    display: flex
-    flex-flow: column wrap
-    flex-grow: 0
-    column-gap: 30px
-
-    padding: 80px 180px
-    h3
-        width: 300px
-    h3, h4, h5
-        color: $color-dark-l
-    h3, h5, div
-        margin: 0 0 20px 0
-
-    .credit-card
-        display: flex
-        flex-direction: row
-        // justify-content: space-between
-        background: #F1CDB3
-        align-items: center
-        padding: 10px 15px
-        gap: 10px
-        width: 349px
-        height: 43px
-        background: $color-primary
-        border-radius: 9px
-
-        img
-            width: 30px
-            height: 23px
-            color: $color-dark-3xl
-
-    .donation-description
-        color: $color-dark-m
-        width: 380px
-        margin: 0 0 0 0
-
-.footer > .wrapper
-    height:350px
-    @extend %footer-gradient-background
-    color: $color-primary
-    display: flex
-    flex-flow: column wrap
-    // justify-content: flex-start
-    align-content: flex-start
-    column-gap: 130px
-    row-gap: 40px
-    padding-top:56px
-    h3
-        width: 280px
-        color: $color-light-xl
-    .contact
-        display: flex
-        flex-direction: row
-        justify-content: flex-start
-        align-items: center
-        width: 320px
-    background: url("./assets/img/footer-puppy.png") no-repeat 95% bottom, url("./assets/img/noise_transparent@2x.png"), #513D2F
-    img
-        width: 40px
-        height: 32px
-        flex: 0 0 auto
-    h4
-        margin-left: 10px
-
 h1, h2, h3, h4, h5
     font-family: $font-main
     font-style: normal
@@ -264,23 +71,6 @@ h5
 p
     margin: 0 0 25px 0
 
-.nav-list
-  list-style: none
-  display: flex
-  align-items: center
-  justify-content: center
-
-.nav-item
-  margin-left: 35px
-
-.nav-link
-  text-decoration: none
-  padding: 0
-  color: $color-dark-s
-
-.nav-item, p
-    @extend %paragraph-l
-
 %paragraph-l
     font-family: $arial-regular
     font-size: $font-size-m
@@ -296,19 +86,365 @@ p
     font-weight: 400
     font-style: italic
 
-.donation-description
-    @extend %paragraph-s
-    line-height: 18px
+$noise: url("./assets/img/noise_transparent@2x.png")
+%start-screen-gradient-background
+    background: $noise, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20
+%footer-gradient-background
+    background: $noise, radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20
 
-.button
-    width: 100px
+body
+    @extend %start-screen-gradient-background
 
-.pets-card-title
-    font: $font-main
-    font-size: 20px
-    line-height: 23px
+%center
+    margin: 0 auto
+
+/* body
+  display: flex
+  flex-direction: column
+  margin: 0
+  padding: 0 */
+
+*
+    padding: 0px
+    margin: 0px
+html
+    box-sizing: border-box
+*
+    box-sizing: inherit
+    &::before, &::after
+        box-sizing: inherit
+html, body
+  scroll-behavior: smooth
+
+.wrapper
+  max-width: 1280px
+  margin: 0 auto
+  padding: 0 40px
+
+.header > .wrapper
+    height:120px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    // border-bottom: solid 1px
+
+.header-pets
+    background: $color-light-xl
+.header-main
+    // background: $noise, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20
+
+%header-logo-title
+    font-family: $font-main
+    font-size: 32px
+    line-height: 110%
+    font-style: normal
+    font-weight: 400
+    letter-spacing: 0.06em
+    text-decoration: none
+.header-logo-title
+    &__main
+        @extend %header-logo-title
+        color: $color-primary
+    &__pets
+        @extend %header-logo-title
+        color: $color-dark-l
+
+%header-logo-subtitle
+    font-family: $arial-regular
+    font-size: 13px
+    line-height: 15px
+    font-style: normal
+    font-weight: 400
+    letter-spacing: 0.1em
+    text-decoration: none
+.header-logo-subtitle
+    &__main
+        @extend %header-logo-subtitle
+        color: $color-light-xl
+    &__pets
+        @extend %header-logo-subtitle
+        color: $color-dark-3xl
+    // align-items: center
+    // display: flex
+
+.nav-list
+    list-style: none
     display: flex
     align-items: center
-    text-align: center
-    letter-spacing: 0.06em
+    justify-content: center
+
+.nav-item
+    margin-left: 35px
+
+%nav-link
+    text-decoration: none
+    padding: 0
+    position: relative
+    transition: color 0.3s
+    &::after
+        content: ""
+        position: absolute
+        background-color: $color-primary
+        height: 3px
+        width: 0
+        left: 0
+        bottom: -7px
+        transition: 0.3s
+    &:hover::after
+        width: 100%
+
+
+.nav-link-main
+    @extend %nav-link
+    color: $color-dark-s
+.nav-link-main:hover
+    @extend %nav-link
+    color: $color-light-s
+.nav-link-pets
+    @extend %nav-link
     color: $color-dark-l
+.nav-link-pets:hover
+    @extend %nav-link
+    color: $color-dark-3xl
+
+// .nav-link-main__inactive
+//     @extend %nav-link::after
+
+
+.nav-item, p
+    @extend %paragraph-l
+
+.welcome
+    // background: $noise, radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20
+.welcome > .wrapper
+    height: 908px - 120px
+    background: url("./assets/img/start-screen-puppy.png") no-repeat right bottom
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: flex-start
+    p
+        color: $color-dark-s
+        width: 460px
+    .welcome-pic
+        display: none
+
+.about
+    background-color: $color-light-xl
+.about > .wrapper
+    height:588px
+    display: flex
+    flex-flow: column wrap
+    column-gap: 120px
+    flex-grow: 0
+    padding: 60px 215px
+
+    h3
+        width: 360px
+        margin-bottom: 25px
+        color: $color-dark-l
+
+    p
+        color: $color-dark-xl
+        width: 430px
+.pets
+    background-color: $color-light-l
+.pets > .wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    h3
+        width: 400px
+        text-align: center
+        margin: 80px auto 60px auto
+    .our-pets-button
+        @extend %button-primary
+        // margin: 0 auto
+    .button-arrow
+        width: 52px
+        height: 52px
+    .pets-carousel
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        gap: 53px
+
+.pets-cards-block-pets
+    display: flex
+    flex-flow: row wrap
+    // justify-content:
+    gap: 30px 40px
+
+.pets-cards-block-main
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    gap: 90px
+
+.pets-card
+    width: 270px
+    height: 435px
+    background-color: $color-light-s
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 30px
+    border-radius: 9px
+    overflow: hidden
+    transition: 0.3s
+    &:hover 
+        transform: scale(1.1)
+    .pets-card-button
+        @extend %button-secondary
+    .pets-card-title
+        font: $font-main
+        font-size: 20px
+        line-height: 23px
+        display: flex
+        align-items: center
+        text-align: center
+        letter-spacing: 0.06em
+        color: $color-dark-l
+    // .pets-card-pic
+    // .pets-card-title
+
+.pets-main
+    height: 877px
+.help
+    background-color: $color-light-xl
+.help > .wrapper
+    height:611px
+    h3
+        width: 310px
+        text-align: center
+        margin: 0 auto 60px auto
+        padding-top: 80px
+    .help-box
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        gap: 55px 120px
+
+        .help-heading
+            @extend h4
+            text-align: center
+        img
+            display: block
+            margin: 0 auto 30px auto
+
+.donation
+    background-color: $color-light-l
+.donation > .wrapper
+    height:462px
+    display: flex
+    flex-flow: column wrap
+    flex-grow: 0
+    column-gap: 30px
+
+    padding: 80px 180px
+    h3
+        width: 300px
+    h3, h4, h5
+        color: $color-dark-l
+    h3, h5, div
+        margin: 0 0 20px 0
+
+    .credit-card
+        display: flex
+        flex-direction: row
+        // justify-content: space-between
+        background: #F1CDB3
+        align-items: center
+        padding: 10px 15px
+        gap: 10px
+        width: 349px
+        height: 43px
+        background: $color-primary
+        border-radius: 9px
+        img
+            width: 30px
+            height: 23px
+            color: $color-dark-3xl
+
+    .donation-description
+        @extend %paragraph-s
+        line-height: 18px
+        color: $color-dark-m
+        width: 380px
+        margin: 0 0 0 0
+
+
+.footer
+    @extend %footer-gradient-background
+.footer > .wrapper
+    height:350px
+    background: url("./assets/img/footer-puppy.png") no-repeat 95% bottom
+    color: $color-primary
+    display: flex
+    flex-flow: column wrap
+    // justify-content: flex-start
+    align-content: flex-start
+    column-gap: 130px
+    row-gap: 40px
+    padding-top:56px
+    h3
+        width: 280px
+        color: $color-light-xl
+    .contact
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        width: 320px
+    img
+        width: 40px
+        height: 32px
+        flex: 0 0 auto
+    h4
+        margin-left: 10px
+
+
+%button
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 15px 45px
+    gap: 10px
+    border-radius: 100px
+    border: 0
+    color: $color-dark-3xl
+    cursor: pointer
+    transition: background 0.5s
+
+    font-family: $font-main
+    font-style: normal
+    font-weight: 400
+    font-size: 17px
+    line-height: 130%
+    letter-spacing: 0.06em
+
+    flex: none
+    order: 0
+    align-self: center
+    flex-grow: 0
+
+%button-primary
+    @extend %button
+    background: $color-primary
+    &:hover
+        background: $color-primary-light
+%button-secondary
+    @extend %button
+    background: $color-light-xl
+    border: solid 2px $color-primary
+    &:hover
+        background: $color-primary
+
+.button-welcome
+    @extend %button-primary
+    align-self: flex-start
+
+%arrow
+    cursor: pointer
+
