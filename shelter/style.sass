@@ -196,9 +196,9 @@ html, body
         width: 0
         left: 0
         bottom: -7px
-        transition: 0.3s
-    &:hover::after
-        width: 100%
+        // transition: 0.3s
+    // &:hover::after
+    //     width: 100%
 
 
 .nav-link-main
@@ -315,8 +315,11 @@ html, body
     border-radius: 9px
     overflow: hidden
     transition: 0.3s
+    cursor: pointer
     &:hover 
-        transform: scale(1.1)
+        .pets-card-button
+            background: $color-primary
+        // transform: scale(1.1)
     .pets-card-button
         @extend %button-secondary
     .pets-card-title

@@ -189,10 +189,6 @@ html, body {
   width: 0;
   left: 0;
   bottom: -7px;
-  transition: 0.3s;
-}
-.nav-link-pets__active:hover::after, .nav-link-pets:hover::after, .nav-link-main__active:hover::after, .nav-link-main:hover::after {
-  width: 100%;
 }
 
 .nav-link-main {
@@ -315,9 +311,10 @@ html, body {
   border-radius: 9px;
   overflow: hidden;
   transition: 0.3s;
+  cursor: pointer;
 }
-.pets-card:hover {
-  transform: scale(1.1);
+.pets-card:hover .pets-card-button {
+  background: rgb(241, 205, 179);
 }
 .pets-card .pets-card-title {
   font: "Georgia";
