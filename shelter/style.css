@@ -283,11 +283,6 @@ html, body {
   width: 400px;
   text-align: center;
 }
-.pets > .wrapper .button-arrow {
-  cursor: pointer;
-  width: 52px;
-  height: 52px;
-}
 .pets > .wrapper .pets-carousel {
   display: flex;
   flex-direction: row;
@@ -358,7 +353,7 @@ html, body {
 
 .pagination__button {
   cursor: pointer;
-  transform: background 0.3s;
+  transition: background 0.3s;
   border: 2px solid rgb(241, 205, 179);
 }
 .pagination__button:hover {
@@ -434,11 +429,15 @@ html, body {
   background: rgb(241, 205, 179);
   border-radius: 9px;
   cursor: pointer;
+  transition: background 0.5s;
 }
 .donation > .wrapper .credit-card img {
   width: 30px;
   height: 23px;
   color: rgb(41, 41, 41);
+}
+.donation > .wrapper .credit-card:hover {
+  background: rgb(253, 220, 196);
 }
 .donation > .wrapper .donation-description {
   line-height: 18px;
@@ -480,7 +479,7 @@ html, body {
   margin-left: 20px;
 }
 
-.pets-card .pets-card-button, .button-welcome, .pets > .wrapper .our-pets-button {
+.pets-card .pets-card-button, .our-pets-button, .button-welcome {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -503,10 +502,10 @@ html, body {
   flex-grow: 0;
 }
 
-.button-welcome, .pets > .wrapper .our-pets-button {
+.our-pets-button, .button-welcome {
   background: rgb(241, 205, 179);
 }
-.button-welcome:hover, .pets > .wrapper .our-pets-button:hover {
+.our-pets-button:hover, .button-welcome:hover {
   background: rgb(253, 220, 196);
 }
 
@@ -520,4 +519,10 @@ html, body {
 
 .button-welcome {
   align-self: flex-start;
+}
+
+.button-arrow {
+  cursor: pointer;
+  width: 52px;
+  height: 52px;
 }

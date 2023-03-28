@@ -284,14 +284,6 @@ html, body
         width: 400px
         text-align: center
         // margin: 80px auto 0 auto
-    .our-pets-button
-        @extend %button-primary
-        // margin: 0 auto
-    .button-arrow
-        cursor: pointer
-        width: 52px
-        height: 52px
-        // @extend %arrow
     .pets-carousel
         display: flex
         flex-direction: row
@@ -363,7 +355,7 @@ html, body
     text-align: center
 .pagination__button
     cursor: pointer
-    transform: background 0.3s
+    transition: background 0.3s
     border: 2px solid $color-primary
     &:hover
         background: $color-primary
@@ -371,6 +363,7 @@ html, body
     @extend %arrow
     color: $color-dark-s
     border: 2px solid  $color-dark-s
+
 
 /* HELP */
 .help
@@ -425,11 +418,13 @@ html, body
         background: $color-primary
         border-radius: 9px
         cursor: pointer
+        transition: background 0.5s
         img
             width: 30px
             height: 23px
             color: $color-dark-3xl
-
+    .credit-card:hover
+        background: $color-primary-light
     .donation-description
         @extend %paragraph-s
         line-height: 18px
@@ -511,5 +506,14 @@ html, body
     @extend %button-primary
     align-self: flex-start
 
-
+.our-pets-button
+    @extend %button-primary
+    // margin: 0 auto
+.button-arrow
+    cursor: pointer
+    width: 52px
+    height: 52px
+    // @extend %arrow
+.button-arrow:hover
+    // background: $color-primary
         
