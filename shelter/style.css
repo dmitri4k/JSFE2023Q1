@@ -310,7 +310,6 @@ html, body {
   border-radius: 9px;
   overflow: hidden;
   transition: 0.3s;
-  cursor: pointer;
 }
 .pets-card:hover {
   background-color: rgb(255, 255, 255);
