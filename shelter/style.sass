@@ -129,10 +129,11 @@ body
     margin: 0 auto
 
 // body
-//   display: flex
-//   flex-direction: column
-//   margin: 0
-//   padding: 0
+//     display: flex
+//     flex-direction: column
+//     align-items: center
+//     margin: 0
+//     padding: 0
 
 *
     padding: 0px
@@ -320,7 +321,7 @@ html, body
         @include respond-to('mobile')
             text-align: center
 
-.welcome-pic
+.welcome-pic, .footer-pic
     display: none
 
 .about
@@ -625,31 +626,33 @@ html, body
 
 .footer
     @extend %footer-gradient-background
+    // display: flex
+    // flex-direction: column
+    // margin: 0
+    // padding: 0
+
 .footer > .wrapper
     height:350px
     background: url("./assets/img/footer-puppy.png") no-repeat 96% bottom
     color: $color-primary
+    
     display: flex
-
-    flex-flow: column wrap
-    justify-content: space-between
+    flex-flow: row nowrap
+    justify-content: flex-start
     align-content: flex-start
-    column-gap: 122px
-    padding-top:56px
-    padding-bottom: 60px
+    column-gap: 138px
+    padding: 40px
     @include respond-to('tablet')
         height: 639px
-        align-items: flex-start
-        align-content: flex-start
-        column-gap: 24px
+        justify-content: center
+        column-gap: 36px
         background-position: center bottom
-        padding: 30px 64px (639px-30px-234px) 64px
+        padding: 30px
     @include respond-to('mobile')
         height: 809px
+        flex-flow: column nowrap
         justify-content: flex-start
-        align-items: center
-        align-content: center
-        row-gap: 41px
+        row-gap: 40px
         background-position: center bottom
         background-size: 81%
         padding: 30px 10px
@@ -658,6 +661,26 @@ html, body
     h3
         width: 280px
         color: $color-light-xl
+.contacts-block
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-between
+    margin-top: 16px
+    width: 302px
+    height: 234px
+    @include respond-to('tablet')
+        margin-top: 0
+    @include respond-to('mobile')
+        height: 208px
+        margin-top: 0
+        align-items: center
+.contacts-block:last-of-type
+    @include respond-to('mobile')
+        height: 222px
+        .contact:last-child
+            align-self: flex-start
+
+
 .contact
     display: flex
     flex-direction: row
@@ -672,8 +695,8 @@ html, body
             justify-content: center
             align-items: center
             width: revert !important
-            &:nth-last-child(1)
-                align-self: flex-start
+    // &:nth-last-of-type(1)
+    //     align-self: flex-start
     path
         fill: $color-primary
         transition: fill 0.3s
@@ -797,8 +820,13 @@ html, body
     // display: none
 
 
+/* Desktop*/
+@media screen and (min-width: 1280px)
+    .pets-card
+        display: flex
+
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1279px)
+@media screen and (min-width: 768px)
     .pets-card
         display: none
     .pets-card:nth-child(-n+2)
@@ -810,7 +838,7 @@ html, body
         .pets-card:nth-child(-n+6)
             display: flex
 /* Phone */
-@media screen and (min-width: 320px) and (max-width: 767px)
+@media screen and (min-width: 320px)
     .pets-card
         display: none
     .pets-card:nth-child(-n+1)

@@ -318,7 +318,7 @@ html, body {
   }
 }
 
-.welcome-pic {
+.welcome-pic, .footer-pic {
   display: none;
 }
 
@@ -759,32 +759,29 @@ html, body {
   background: url("./assets/img/footer-puppy.png") no-repeat 96% bottom;
   color: rgb(241, 205, 179);
   display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
   align-content: flex-start;
-  -moz-column-gap: 122px;
-       column-gap: 122px;
-  padding-top: 56px;
-  padding-bottom: 60px;
+  -moz-column-gap: 138px;
+       column-gap: 138px;
+  padding: 40px;
 }
 @media (max-width: 1279px) {
   .footer > .wrapper {
     height: 639px;
-    align-items: flex-start;
-    align-content: flex-start;
-    -moz-column-gap: 24px;
-         column-gap: 24px;
+    justify-content: center;
+    -moz-column-gap: 36px;
+         column-gap: 36px;
     background-position: center bottom;
-    padding: 30px 64px 375px 64px;
+    padding: 30px;
   }
 }
 @media (max-width: 767px) {
   .footer > .wrapper {
     height: 809px;
+    flex-flow: column nowrap;
     justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    row-gap: 41px;
+    row-gap: 40px;
     background-position: center bottom;
     background-size: 81%;
     padding: 30px 10px;
@@ -796,6 +793,36 @@ html, body {
 .footer > .wrapper h3 {
   width: 280px;
   color: rgb(255, 255, 255);
+}
+
+.contacts-block {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin-top: 16px;
+  width: 302px;
+  height: 234px;
+}
+@media (max-width: 1279px) {
+  .contacts-block {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .contacts-block {
+    height: 208px;
+    margin-top: 0;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts-block:last-of-type {
+    height: 222px;
+  }
+  .contacts-block:last-of-type .contact:last-child {
+    align-self: flex-start;
+  }
 }
 
 .contact {
@@ -814,9 +841,6 @@ html, body {
     justify-content: center;
     align-items: center;
     width: revert !important;
-  }
-  .contact:nth-last-child(1) {
-    align-self: flex-start;
   }
 }
 .contact path {
@@ -944,8 +968,14 @@ html, body {
   stroke: rgb(0, 0, 0);
 }
 
+/* Desktop*/
+@media screen and (min-width: 1280px) {
+  .pets-card {
+    display: flex;
+  }
+}
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .pets-card {
     display: none;
   }
@@ -960,7 +990,7 @@ html, body {
   }
 }
 /* Phone */
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) {
   .pets-card {
     display: none;
   }
