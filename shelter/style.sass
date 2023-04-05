@@ -821,12 +821,12 @@ html, body
 
 
 /* Desktop*/
-@media screen and (min-width: 1280px)
+@media screen and (min-width: $desktop-width)
     .pets-card
         display: flex
 
 /* Tablet */
-@media screen and (min-width: 768px)
+@media screen and (min-width: $tablet-width) and (max-width: $desktop-width - 1)
     .pets-card
         display: none
     .pets-card:nth-child(-n+2)
@@ -838,7 +838,7 @@ html, body
         .pets-card:nth-child(-n+6)
             display: flex
 /* Phone */
-@media screen and (min-width: 320px)
+@media screen and (max-width: $tablet-width - 1)
     .pets-card
         display: none
     .pets-card:nth-child(-n+1)
