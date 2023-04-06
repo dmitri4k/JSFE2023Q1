@@ -1,0 +1,33 @@
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+  
+    @if $raw-query {
+      $query: if(
+        type-of($raw-query) == 'string',
+        unquote($raw-query),
+        inspect($raw-query)
+      );
+  
+      @media #{$query} {
+        @content;
+      }
+    } @else {
+      @error 'No value found for `#{$breakpoint}`. '
+           + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+  }
+
+  $desktop-width: 1280px;
+  $tablet-width: 768px;
+  $mobile-width: 320px;
+
+$breakpoints: (
+    'mobile': (min-width: $mobile-width) and (max-width: $tablet-width - 1),
+    'tablet': (min-width: $tablet-width) and (max-width: $desktop-width - 1),
+    'desktop': (min-width: $desktop-width),
+  );
+
+@function get-vw($target) { 
+  $vw-context: (1000*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}

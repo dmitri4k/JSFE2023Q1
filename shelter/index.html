@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shelter</title>
+  <title>Main - Shelter</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
   <!-- <link rel="stylesheet" type="text/css" href="./style-css.css"> -->
   <!-- <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
@@ -40,6 +40,13 @@
           </li>
         </ul>
       </nav>
+      <div class="nav-burger">
+        <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="21" x2="30" y2="21" stroke="#F1CDB3" stroke-width="2"/>
+          <line y1="11" x2="30" y2="11" stroke="#F1CDB3" stroke-width="2"/>
+          <line y1="1" x2="30" y2="1" stroke="#F1CDB3" stroke-width="2"/>
+          </svg>
+      </div>
     </div>
   </header>
   <main class="main">
@@ -47,13 +54,15 @@
     <!-- Section 1 start -->
     <section class="welcome" id="welcome">
       <div class="wrapper">
+
         <h1>Not only people<br>need a house</h1>
         <p>
           We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will
           love you more than anybody else in the world, you will see!
         </p>
         <button class="button-welcome" onclick="location.href='#pets'" type="button">Make a friend</button>
-        <!-- <img src="./assets/img/start-screen-puppy.png" class="pic welcome-pic" alt="start-screen-puppy"> -->
+
+        <img src="./assets/img/start-screen-puppy.png" class="pic welcome-pic" alt="start-screen-puppy">
       </div>
     </section>
 
@@ -111,7 +120,7 @@
       <div class="wrapper">
         <h3>How you can help our shelter</h3>
 
-        <div class="help-box">
+        <div class="help-block">
           <div class="help-item">
             <img src="./assets/svg/icon-pet-food.svg" alt="icon-pet-food" class="help-icon">
             <div class="help-heading">Pet food</div>
@@ -157,11 +166,11 @@
     <section class="donation" id="donation">
       <div class="wrapper">
         <img src="./assets/img/donation-dog.png" class="pic donation-pic" alt="donation-dog">
-        <h3>You can also make a donation</h3>
+        <h3>You can also<br>make a donation</h3>
         <h5>Name of the bank / Type of bank account</h5>
         <div class="credit-card" onclick="location.href='#?'">
           <img src="./assets/svg/icon-credit-card.svg" alt="icon-credit-card.svg">
-          <h4>8380 2880 8028 8791 7435</h4>
+          <h4 class="credit-card-number">8380 2880 8028 8791 7435</h4>
         </div>
         <p class="donation-description">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate.
@@ -172,6 +181,7 @@
   </main>
   <footer class="footer" id="footer">
     <div class="wrapper">
+      <div class="contacts-block">
       <h3>For questions and suggestions</h3>
       <a class="contact" href="mailto:email@shelter.com">
         <svg width="40" height="26" viewBox="0 0 40 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,6 +199,8 @@
           </svg>
         <h4>+13&nbsp;674&nbsp;567&nbsp;75&nbsp;54</h4>
       </a>
+    </div>
+      <div class="contacts-block">
       <h3>We are waiting for your visit</h3>
       <a class="contact" href="https://www.google.com/maps/@42.3585558,-71.056915,17z" target="_blank">
         <svg width="22" height="32" viewBox="0 0 22 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -204,10 +216,11 @@
           </svg>
         <h4>18 South Park, London</h4>
       </a>
-      <!-- <img src="./assets/img/footer-puppy.png" class="pic footer-pic" alt="footer-puppy"> -->
+    </div>
+      <img src="./assets/img/footer-puppy.png" class="pic footer-pic" alt="footer-puppy">
     </div>
   </footer>
-  <!-- <script src="./index.js"></script> -->
+  <script src="./index.js"></script>
 </body>
 
 </html>
