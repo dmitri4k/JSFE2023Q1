@@ -933,11 +933,12 @@ html, body {
 
 .pagination__button {
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, border 0.3s;
   border: 2px solid rgb(241, 205, 179);
 }
 .pagination__button:hover {
-  background: rgb(241, 205, 179);
+  background: rgb(253, 220, 196);
+  border-color: rgb(253, 220, 196);
 }
 
 .pagination__button__inactive {
@@ -953,7 +954,7 @@ html, body {
   display: none;
   stroke: rgb(241, 205, 179);
   cursor: pointer;
-  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in-out;
 }
 @media (max-width: 767px) {
   .nav-burger {

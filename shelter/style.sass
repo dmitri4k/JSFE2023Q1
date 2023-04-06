@@ -782,10 +782,11 @@ html, body
 .pagination__button
     @extend %arrow
     cursor: pointer
-    transition: background 0.3s
+    transition: background 0.3s, border 0.3s
     border: 2px solid $color-primary
     &:hover
-        background: $color-primary
+        background: $color-primary-light
+        border-color: $color-primary-light
 .pagination__button__inactive
     @extend %arrow
     color: $color-dark-s
@@ -808,7 +809,7 @@ html, body
     display: none
     stroke: $color-primary
     cursor: pointer
-    transition: transform 0.3s ease-in
+    transition: transform 0.3s ease-in-out
     @include respond-to('mobile')
         display: block
     &:hover, &__active

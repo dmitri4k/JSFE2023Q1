@@ -26,3 +26,8 @@ $breakpoints: (
     'tablet': (min-width: $tablet-width) and (max-width: $desktop-width - 1),
     'desktop': (min-width: $desktop-width),
   );
+
+@function get-vw($target) { 
+  $vw-context: (1000*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
