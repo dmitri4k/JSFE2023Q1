@@ -487,7 +487,8 @@ html, body {
   gap: 29px;
   border-radius: 9px;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.2s;
+  cursor: pointer;
 }
 .pets-card:hover {
   background-color: rgb(255, 255, 255);
@@ -1004,4 +1005,4 @@ html, body {
   .pets-pets .pets-card:nth-child(-n+3) {
     display: flex;
   }
-}
+}/*# sourceMappingURL=style.css.map */
